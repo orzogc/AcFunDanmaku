@@ -3,7 +3,6 @@
 # AcFunDanmaku
 AcFunDanmaku是用C# 和 .Net Core 3.1编写的AcFun直播弹幕工具。
 该项目分为13个子项目。
-**不提供32位程序。**
 
 ## AcFunDanmu 
 AcFun直播弹幕解析工具。**开发中**
@@ -19,12 +18,13 @@ AcFun直播弹幕解析工具。**开发中**
 ```
 Using AcFunDanmu;
 ...
+await Client.Prepare();
 三选一
 1. var client = new Client(用户ID, ServiceToken, SecurityKey, Tickets, EnteryRoomAttach, LiveId);
 2. var client = new Client(); await client.Initialize(主播ID);
-3. var client = new Client(); await client.Login(用户名, 密码, 主播ID);
+3. var client = new Client(); await client.InitializeWithLogin(用户名, 密码, 主播ID);
 
-client.Handler = (你的自定义函数);
+client.Handler += (你的自定义函数);
 await client.Start();
 ```
 *具体请参考AcFunDanmuConsole*

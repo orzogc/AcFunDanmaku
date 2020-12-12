@@ -1,13 +1,26 @@
 ﻿using Google.Protobuf;
+using Serilog;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
+using System.Linq;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace AcFunDanmu
 {
     public static class ClientUtils
     {
+        private static readonly SortedList<string, string> QueryDict = new SortedList<string, string> {
+            { "appver", "1.4.0.145" },
+            { "sys", "PC_10" },
+            { "kpn", "ACFUN_APP.LIVE_MATE" },
+            { "kpf", "WINDOWS_PC" },
+            { "subBiz", "mainApp" },
+        };
+        private static string Query => string.Join('&', QueryDict.Select(query => $"{query.Key}={query.Value}"));
+
         private const int HeaderOffset = 12;
         private const int IVLength = 16;
 
@@ -38,7 +51,7 @@ namespace AcFunDanmu
 
             var len = HeaderOffset + bHeader.Length + encrypt.Length;
 
-            Span<byte> data = len < 1024 ? stackalloc byte[len] : new byte[len];
+            Span<byte> data = stackalloc byte[len];
             data[0] = 0xAB;
             data[1] = 0xCD;
             data[2] = 0x00;
@@ -72,6 +85,32 @@ namespace AcFunDanmu
             return (headerLength, payloadLength);
         }
 
+        public static T Decode<T>(ReadOnlySpan<byte> bytes, string SecurityKey, string SessionKey, out PacketHeader header) where T: class, IMessage<T>
+        {
+            var (headerLength, payloadLength) = DecodeLengths(bytes);
+
+            header = PacketHeader.Parser.ParseFrom(bytes.Slice(HeaderOffset, headerLength).ToArray());
+
+            ReadOnlySpan<byte> payload = bytes.Slice(HeaderOffset + headerLength, payloadLength);
+            if (header.EncryptionMode != PacketHeader.Types.EncryptionMode.KEncryptionNone)
+            {
+                var key = header.EncryptionMode == PacketHeader.Types.EncryptionMode.KEncryptionServiceToken ? SecurityKey : SessionKey;
+
+                payload = Decrypt(payload, key);
+            }
+
+
+            if (Convert.ToUInt32(payload.Length) != header.DecodedPayloadLen)
+            {
+                Log.Error("Payload length does not match");
+                Log.Debug("Payload Data: {Data}", Convert.ToBase64String(payload));
+                return null;
+            }
+
+            var obj = Parse<T>(payload);
+            return obj;
+        }
+
         public static object Decode(Type type, ReadOnlySpan<byte> bytes, string SecurityKey, string SessionKey, out PacketHeader header)
         {
             var (headerLength, payloadLength) = DecodeLengths(bytes);
@@ -89,10 +128,8 @@ namespace AcFunDanmu
 
             if (Convert.ToUInt32(payload.Length) != header.DecodedPayloadLen)
             {
-#if DEBUG
-                Console.WriteLine("Payload length does not match");
-                Console.WriteLine(Convert.ToBase64String(payload));
-#endif
+                Log.Error("Payload length does not match");
+                Log.Debug("Payload Data: {Data}", Convert.ToBase64String(payload));
                 return null;
             }
 
@@ -114,7 +151,7 @@ namespace AcFunDanmu
 
             var len = aes.IV.Length + encrypted.Length;
 
-            Span<byte> payload = len < 1024 ? stackalloc byte[len] : new byte[len];
+            Span<byte> payload = stackalloc byte[len];
             Copy(aes.IV, 0, payload, 0, aes.IV.Length);
             Copy(encrypted, 0, payload, aes.IV.Length, encrypted.Length);
 
@@ -127,7 +164,7 @@ namespace AcFunDanmu
             using var decryptor = aes.CreateDecryptor(Convert.FromBase64String(key), bytes.Slice(0, IVLength).ToArray());
             using var ms = new MemoryStream();
             using var cs = new CryptoStream(ms, decryptor, CryptoStreamMode.Write);
-            cs.Write(bytes.Slice(IVLength));
+            cs.Write(bytes[IVLength..]);
             cs.FlushFinalBlock();
 
             return ms.ToArray();
@@ -167,6 +204,11 @@ namespace AcFunDanmu
             return obj;
         }
 
+        public static T Parse<T>(ReadOnlySpan<byte> payload) where T : class, IMessage<T>
+        {
+            return Parse(typeof(T), new object[] { ByteString.CopyFrom(payload) }) as T;
+        }
+
         public static object Parse(Type type, ReadOnlySpan<byte> payload)
         {
             return Parse(type, new object[] { ByteString.CopyFrom(payload) });
@@ -181,10 +223,67 @@ namespace AcFunDanmu
             }
             else
             {
-                Console.WriteLine("Unhandled type: {0}", typeName);
-                Console.WriteLine(payload.ToBase64());
+                Log.Warning("Unhandled type: {Type}", typeName);
+                Log.Debug("Payload Data: {Data}", payload.ToBase64());
                 return null;
             }
+        }
+
+        internal static string Sign(string uri, string key, long rnd, Span<byte> bytes, SortedList<string, string> extra = null)
+        {
+            using var hmac = new HMACSHA256(Convert.FromBase64String(key));
+            string query = extra == null ? Query : string.Join('&', QueryDict.Concat(extra).OrderBy(query => query.Key).Select(query => $"{query.Key}={query.Value}"));
+
+            var hash = hmac.ComputeHash(Encoding.UTF8.GetBytes($"POST&{uri}&{query}&{rnd}"));
+            Span<byte> sign = stackalloc byte[bytes.Length + hash.Length];
+            if (BitConverter.IsLittleEndian) { bytes.Reverse(); }
+
+            for (var i = 0; i < bytes.Length; i++)
+            {
+                sign[i] = bytes[i];
+            }
+            for (var i = 0; i < hash.Length; i++)
+            {
+                sign[bytes.Length + i] = hash[i];
+            }
+
+            return ToBase64Url(sign);
+        }
+
+        internal static string Sign(string url, string key, long rnd, SortedList<string, string> extra = null) => Sign(url, key, rnd, BitConverter.GetBytes(rnd), extra);
+
+
+        internal static string Sign(string url, string key, SortedList<string, string> extra = null) => Sign(url, key, Random(), extra);
+
+        internal static long Random()
+        {
+            var random = new Random();
+            var now = DateTimeOffset.UtcNow.ToUnixTimeSeconds();
+            Span<byte> rand = stackalloc byte[4];
+            random.NextBytes(rand);
+            long result = BitConverter.ToInt32(rand);
+            result <<= 0x20;
+            result |= now;
+            return result;
+        }
+
+        internal static byte[] FromBase64Url(string text)
+        {
+            var temp = text.Replace('-', '+').Replace('_', '/');
+            var rem = 8 - (temp.Length & 7);
+            if (rem == 8)
+            {
+                return Convert.FromBase64String(temp);
+            }
+            else
+            {
+                return Convert.FromBase64String(temp.PadRight(temp.Length + rem, '='));
+            }
+        }
+
+        internal static string ToBase64Url(ReadOnlySpan<byte> data)
+        {
+            return Convert.ToBase64String(data).Replace('/', '_').Replace('+', '-').Trim('=');
         }
     }
 }
