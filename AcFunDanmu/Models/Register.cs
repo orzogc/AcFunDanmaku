@@ -27,7 +27,7 @@ namespace AcFunDanmu {
             "Cg5SZWdpc3Rlci5wcm90bxIKQWNGdW5EYW5tdRoNQXBwSW5mby5wcm90bxoQ",
             "RGV2aWNlSW5mby5wcm90bxoNRW52SW5mby5wcm90bxoSWnRDb21tb25JbmZv",
             "LnByb3RvGhhBY2Nlc3NQb2ludHNDb25maWcucHJvdG8aFlB1c2hTZXJ2aWNl",
-            "VG9rZW4ucHJvdG8aD1Nka09wdGlvbi5wcm90byKGBQoPUmVnaXN0ZXJSZXF1",
+            "VG9rZW4ucHJvdG8aD1Nka09wdGlvbi5wcm90byKdBQoPUmVnaXN0ZXJSZXF1",
             "ZXN0EiQKB2FwcEluZm8YASABKAsyEy5BY0Z1bkRhbm11LkFwcEluZm8SKgoK",
             "ZGV2aWNlSW5mbxgCIAEoCzIWLkFjRnVuRGFubXUuRGV2aWNlSW5mbxIkCgdl",
             "bnZJbmZvGAMgASgLMhMuQWNGdW5EYW5tdS5FbnZJbmZvEkIKDnByZXNlbmNl",
@@ -39,20 +39,26 @@ namespace AcFunDanmu {
             "OgoUcHVzaFNlcnZpY2VUb2tlbkxpc3QYCSADKAsyHC5BY0Z1bkRhbm11LlB1",
             "c2hTZXJ2aWNlVG9rZW4SHAoUa2VlcGFsaXZlSW50ZXJ2YWxTZWMYCiABKAUS",
             "LgoMenRDb21tb25JbmZvGAsgASgLMhguQWNGdW5EYW5tdS5adENvbW1vbklu",
-            "Zm8iOwoOUHJlc2VuY2VTdGF0dXMSFAoQa1ByZXNlbmNlT2ZmbGluZRAAEhMK",
-            "D2tQcmVzZW5jZU9ubGluZRABIkgKDEFjdGl2ZVN0YXR1cxIMCghrSW52YWxp",
-            "ZBAAEhQKEGtBcHBJbkZvcmVncm91bmQQARIUChBrQXBwSW5CYWNrZ3JvdW5k",
-            "EAIi3QEKEFJlZ2lzdGVyUmVzcG9uc2USOgoSYWNjZXNzUG9pbnRzQ29uZmln",
-            "GAEgASgLMh4uQWNGdW5EYW5tdS5BY2Nlc3NQb2ludHNDb25maWcSDwoHc2Vz",
-            "c0tleRgCIAEoDBISCgppbnN0YW5jZUlkGAMgASgDEigKCXNka09wdGlvbhgE",
-            "IAEoCzIVLkFjRnVuRGFubXUuU2RrT3B0aW9uEj4KFmFjY2Vzc1BvaW50c0NP",
-            "bmZpZ0lwdjYYBSABKAsyHi5BY0Z1bkRhbm11LkFjY2Vzc1BvaW50c0NvbmZp",
-            "Z2IGcHJvdG8z"));
+            "Zm8SFQoNaXB2NkF2YWlsYWJsZRgMIAEoCCI7Cg5QcmVzZW5jZVN0YXR1cxIU",
+            "ChBrUHJlc2VuY2VPZmZsaW5lEAASEwoPa1ByZXNlbmNlT25saW5lEAEiSAoM",
+            "QWN0aXZlU3RhdHVzEgwKCGtJbnZhbGlkEAASFAoQa0FwcEluRm9yZWdyb3Vu",
+            "ZBABEhQKEGtBcHBJbkJhY2tncm91bmQQAiLwAwoQUmVnaXN0ZXJSZXNwb25z",
+            "ZRI6ChJhY2Nlc3NQb2ludHNDb25maWcYASABKAsyHi5BY0Z1bkRhbm11LkFj",
+            "Y2Vzc1BvaW50c0NvbmZpZxIPCgdzZXNzS2V5GAIgASgMEhIKCmluc3RhbmNl",
+            "SWQYAyABKAMSKAoJc2RrT3B0aW9uGAQgASgLMhUuQWNGdW5EYW5tdS5TZGtP",
+            "cHRpb24SPgoWYWNjZXNzUG9pbnRzQ29uZmlnSXB2NhgFIAEoCzIeLkFjRnVu",
+            "RGFubXUuQWNjZXNzUG9pbnRzQ29uZmlnEj4KFmFjY2Vzc1BvaW50c0NvbmZp",
+            "Z1FVaWMYBiABKAsyHi5BY0Z1bkRhbm11LkFjY2Vzc1BvaW50c0NvbmZpZxJC",
+            "ChphY2Nlc3NQb2ludHNDb25maWdRdWljSXB2NhgHIAEoCzIeLkFjRnVuRGFu",
+            "bXUuQWNjZXNzUG9pbnRzQ29uZmlnEhgKEGNsZWFuQWNjZXNzUG9pbnQYCCAB",
+            "KAgSGgoSZmxvd0Nvc3RTYW1wbGVSYXRlGAkgASgCEhkKEWNvbW1hbmRTYW1w",
+            "bGVSYXRlGAogASgCEjwKFGFjY2Vzc1BvaW50c0NvbmZpZ1dzGAsgASgLMh4u",
+            "QWNGdW5EYW5tdS5BY2Nlc3NQb2ludHNDb25maWdiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::AcFunDanmu.AppInfoReflection.Descriptor, global::AcFunDanmu.DeviceInfoReflection.Descriptor, global::AcFunDanmu.EnvInfoReflection.Descriptor, global::AcFunDanmu.ZtCommonInfoReflection.Descriptor, global::AcFunDanmu.AccessPointsConfigReflection.Descriptor, global::AcFunDanmu.PushServiceTokenReflection.Descriptor, global::AcFunDanmu.SdkOptionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::AcFunDanmu.RegisterRequest), global::AcFunDanmu.RegisterRequest.Parser, new[]{ "AppInfo", "DeviceInfo", "EnvInfo", "PresenceStatus", "AppActiveStatus", "AppCustomStatus", "PushServiceToken", "InstanceId", "PushServiceTokenList", "KeepaliveIntervalSec", "ZtCommonInfo" }, null, new[]{ typeof(global::AcFunDanmu.RegisterRequest.Types.PresenceStatus), typeof(global::AcFunDanmu.RegisterRequest.Types.ActiveStatus) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::AcFunDanmu.RegisterResponse), global::AcFunDanmu.RegisterResponse.Parser, new[]{ "AccessPointsConfig", "SessKey", "InstanceId", "SdkOption", "AccessPointsCOnfigIpv6" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::AcFunDanmu.RegisterRequest), global::AcFunDanmu.RegisterRequest.Parser, new[]{ "AppInfo", "DeviceInfo", "EnvInfo", "PresenceStatus", "AppActiveStatus", "AppCustomStatus", "PushServiceToken", "InstanceId", "PushServiceTokenList", "KeepaliveIntervalSec", "ZtCommonInfo", "Ipv6Available" }, null, new[]{ typeof(global::AcFunDanmu.RegisterRequest.Types.PresenceStatus), typeof(global::AcFunDanmu.RegisterRequest.Types.ActiveStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::AcFunDanmu.RegisterResponse), global::AcFunDanmu.RegisterResponse.Parser, new[]{ "AccessPointsConfig", "SessKey", "InstanceId", "SdkOption", "AccessPointsConfigIpv6", "AccessPointsConfigQUic", "AccessPointsConfigQuicIpv6", "CleanAccessPoint", "FlowCostSampleRate", "CommandSampleRate", "AccessPointsConfigWs" }, null, null, null, null)
           }));
     }
     #endregion
@@ -99,6 +105,7 @@ namespace AcFunDanmu {
       pushServiceTokenList_ = other.pushServiceTokenList_.Clone();
       keepaliveIntervalSec_ = other.keepaliveIntervalSec_;
       ztCommonInfo_ = other.ztCommonInfo_ != null ? other.ztCommonInfo_.Clone() : null;
+      ipv6Available_ = other.ipv6Available_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -227,6 +234,17 @@ namespace AcFunDanmu {
       }
     }
 
+    /// <summary>Field number for the "ipv6Available" field.</summary>
+    public const int Ipv6AvailableFieldNumber = 12;
+    private bool ipv6Available_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Ipv6Available {
+      get { return ipv6Available_; }
+      set {
+        ipv6Available_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as RegisterRequest);
@@ -251,6 +269,7 @@ namespace AcFunDanmu {
       if(!pushServiceTokenList_.Equals(other.pushServiceTokenList_)) return false;
       if (KeepaliveIntervalSec != other.KeepaliveIntervalSec) return false;
       if (!object.Equals(ZtCommonInfo, other.ZtCommonInfo)) return false;
+      if (Ipv6Available != other.Ipv6Available) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -268,6 +287,7 @@ namespace AcFunDanmu {
       hash ^= pushServiceTokenList_.GetHashCode();
       if (KeepaliveIntervalSec != 0) hash ^= KeepaliveIntervalSec.GetHashCode();
       if (ztCommonInfo_ != null) hash ^= ZtCommonInfo.GetHashCode();
+      if (Ipv6Available != false) hash ^= Ipv6Available.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -325,6 +345,10 @@ namespace AcFunDanmu {
         output.WriteRawTag(90);
         output.WriteMessage(ZtCommonInfo);
       }
+      if (Ipv6Available != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(Ipv6Available);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -375,6 +399,10 @@ namespace AcFunDanmu {
         output.WriteRawTag(90);
         output.WriteMessage(ZtCommonInfo);
       }
+      if (Ipv6Available != false) {
+        output.WriteRawTag(96);
+        output.WriteBool(Ipv6Available);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -414,6 +442,9 @@ namespace AcFunDanmu {
       }
       if (ztCommonInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ZtCommonInfo);
+      }
+      if (Ipv6Available != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -471,6 +502,9 @@ namespace AcFunDanmu {
           ZtCommonInfo = new global::AcFunDanmu.ZtCommonInfo();
         }
         ZtCommonInfo.MergeFrom(other.ZtCommonInfo);
+      }
+      if (other.Ipv6Available != false) {
+        Ipv6Available = other.Ipv6Available;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -543,6 +577,10 @@ namespace AcFunDanmu {
               ZtCommonInfo = new global::AcFunDanmu.ZtCommonInfo();
             }
             input.ReadMessage(ZtCommonInfo);
+            break;
+          }
+          case 96: {
+            Ipv6Available = input.ReadBool();
             break;
           }
         }
@@ -618,6 +656,10 @@ namespace AcFunDanmu {
             input.ReadMessage(ZtCommonInfo);
             break;
           }
+          case 96: {
+            Ipv6Available = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -676,7 +718,13 @@ namespace AcFunDanmu {
       sessKey_ = other.sessKey_;
       instanceId_ = other.instanceId_;
       sdkOption_ = other.sdkOption_ != null ? other.sdkOption_.Clone() : null;
-      accessPointsCOnfigIpv6_ = other.accessPointsCOnfigIpv6_ != null ? other.accessPointsCOnfigIpv6_.Clone() : null;
+      accessPointsConfigIpv6_ = other.accessPointsConfigIpv6_ != null ? other.accessPointsConfigIpv6_.Clone() : null;
+      accessPointsConfigQUic_ = other.accessPointsConfigQUic_ != null ? other.accessPointsConfigQUic_.Clone() : null;
+      accessPointsConfigQuicIpv6_ = other.accessPointsConfigQuicIpv6_ != null ? other.accessPointsConfigQuicIpv6_.Clone() : null;
+      cleanAccessPoint_ = other.cleanAccessPoint_;
+      flowCostSampleRate_ = other.flowCostSampleRate_;
+      commandSampleRate_ = other.commandSampleRate_;
+      accessPointsConfigWs_ = other.accessPointsConfigWs_ != null ? other.accessPointsConfigWs_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -729,14 +777,80 @@ namespace AcFunDanmu {
       }
     }
 
-    /// <summary>Field number for the "accessPointsCOnfigIpv6" field.</summary>
-    public const int AccessPointsCOnfigIpv6FieldNumber = 5;
-    private global::AcFunDanmu.AccessPointsConfig accessPointsCOnfigIpv6_;
+    /// <summary>Field number for the "accessPointsConfigIpv6" field.</summary>
+    public const int AccessPointsConfigIpv6FieldNumber = 5;
+    private global::AcFunDanmu.AccessPointsConfig accessPointsConfigIpv6_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public global::AcFunDanmu.AccessPointsConfig AccessPointsCOnfigIpv6 {
-      get { return accessPointsCOnfigIpv6_; }
+    public global::AcFunDanmu.AccessPointsConfig AccessPointsConfigIpv6 {
+      get { return accessPointsConfigIpv6_; }
       set {
-        accessPointsCOnfigIpv6_ = value;
+        accessPointsConfigIpv6_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "accessPointsConfigQUic" field.</summary>
+    public const int AccessPointsConfigQUicFieldNumber = 6;
+    private global::AcFunDanmu.AccessPointsConfig accessPointsConfigQUic_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AcFunDanmu.AccessPointsConfig AccessPointsConfigQUic {
+      get { return accessPointsConfigQUic_; }
+      set {
+        accessPointsConfigQUic_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "accessPointsConfigQuicIpv6" field.</summary>
+    public const int AccessPointsConfigQuicIpv6FieldNumber = 7;
+    private global::AcFunDanmu.AccessPointsConfig accessPointsConfigQuicIpv6_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AcFunDanmu.AccessPointsConfig AccessPointsConfigQuicIpv6 {
+      get { return accessPointsConfigQuicIpv6_; }
+      set {
+        accessPointsConfigQuicIpv6_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cleanAccessPoint" field.</summary>
+    public const int CleanAccessPointFieldNumber = 8;
+    private bool cleanAccessPoint_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool CleanAccessPoint {
+      get { return cleanAccessPoint_; }
+      set {
+        cleanAccessPoint_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "flowCostSampleRate" field.</summary>
+    public const int FlowCostSampleRateFieldNumber = 9;
+    private float flowCostSampleRate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float FlowCostSampleRate {
+      get { return flowCostSampleRate_; }
+      set {
+        flowCostSampleRate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "commandSampleRate" field.</summary>
+    public const int CommandSampleRateFieldNumber = 10;
+    private float commandSampleRate_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public float CommandSampleRate {
+      get { return commandSampleRate_; }
+      set {
+        commandSampleRate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "accessPointsConfigWs" field.</summary>
+    public const int AccessPointsConfigWsFieldNumber = 11;
+    private global::AcFunDanmu.AccessPointsConfig accessPointsConfigWs_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::AcFunDanmu.AccessPointsConfig AccessPointsConfigWs {
+      get { return accessPointsConfigWs_; }
+      set {
+        accessPointsConfigWs_ = value;
       }
     }
 
@@ -757,7 +871,13 @@ namespace AcFunDanmu {
       if (SessKey != other.SessKey) return false;
       if (InstanceId != other.InstanceId) return false;
       if (!object.Equals(SdkOption, other.SdkOption)) return false;
-      if (!object.Equals(AccessPointsCOnfigIpv6, other.AccessPointsCOnfigIpv6)) return false;
+      if (!object.Equals(AccessPointsConfigIpv6, other.AccessPointsConfigIpv6)) return false;
+      if (!object.Equals(AccessPointsConfigQUic, other.AccessPointsConfigQUic)) return false;
+      if (!object.Equals(AccessPointsConfigQuicIpv6, other.AccessPointsConfigQuicIpv6)) return false;
+      if (CleanAccessPoint != other.CleanAccessPoint) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(FlowCostSampleRate, other.FlowCostSampleRate)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(CommandSampleRate, other.CommandSampleRate)) return false;
+      if (!object.Equals(AccessPointsConfigWs, other.AccessPointsConfigWs)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -768,7 +888,13 @@ namespace AcFunDanmu {
       if (SessKey.Length != 0) hash ^= SessKey.GetHashCode();
       if (InstanceId != 0L) hash ^= InstanceId.GetHashCode();
       if (sdkOption_ != null) hash ^= SdkOption.GetHashCode();
-      if (accessPointsCOnfigIpv6_ != null) hash ^= AccessPointsCOnfigIpv6.GetHashCode();
+      if (accessPointsConfigIpv6_ != null) hash ^= AccessPointsConfigIpv6.GetHashCode();
+      if (accessPointsConfigQUic_ != null) hash ^= AccessPointsConfigQUic.GetHashCode();
+      if (accessPointsConfigQuicIpv6_ != null) hash ^= AccessPointsConfigQuicIpv6.GetHashCode();
+      if (CleanAccessPoint != false) hash ^= CleanAccessPoint.GetHashCode();
+      if (FlowCostSampleRate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(FlowCostSampleRate);
+      if (CommandSampleRate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(CommandSampleRate);
+      if (accessPointsConfigWs_ != null) hash ^= AccessPointsConfigWs.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -801,9 +927,33 @@ namespace AcFunDanmu {
         output.WriteRawTag(34);
         output.WriteMessage(SdkOption);
       }
-      if (accessPointsCOnfigIpv6_ != null) {
+      if (accessPointsConfigIpv6_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(AccessPointsCOnfigIpv6);
+        output.WriteMessage(AccessPointsConfigIpv6);
+      }
+      if (accessPointsConfigQUic_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AccessPointsConfigQUic);
+      }
+      if (accessPointsConfigQuicIpv6_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AccessPointsConfigQuicIpv6);
+      }
+      if (CleanAccessPoint != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(CleanAccessPoint);
+      }
+      if (FlowCostSampleRate != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(FlowCostSampleRate);
+      }
+      if (CommandSampleRate != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(CommandSampleRate);
+      }
+      if (accessPointsConfigWs_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AccessPointsConfigWs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -830,9 +980,33 @@ namespace AcFunDanmu {
         output.WriteRawTag(34);
         output.WriteMessage(SdkOption);
       }
-      if (accessPointsCOnfigIpv6_ != null) {
+      if (accessPointsConfigIpv6_ != null) {
         output.WriteRawTag(42);
-        output.WriteMessage(AccessPointsCOnfigIpv6);
+        output.WriteMessage(AccessPointsConfigIpv6);
+      }
+      if (accessPointsConfigQUic_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(AccessPointsConfigQUic);
+      }
+      if (accessPointsConfigQuicIpv6_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(AccessPointsConfigQuicIpv6);
+      }
+      if (CleanAccessPoint != false) {
+        output.WriteRawTag(64);
+        output.WriteBool(CleanAccessPoint);
+      }
+      if (FlowCostSampleRate != 0F) {
+        output.WriteRawTag(77);
+        output.WriteFloat(FlowCostSampleRate);
+      }
+      if (CommandSampleRate != 0F) {
+        output.WriteRawTag(85);
+        output.WriteFloat(CommandSampleRate);
+      }
+      if (accessPointsConfigWs_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AccessPointsConfigWs);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -855,8 +1029,26 @@ namespace AcFunDanmu {
       if (sdkOption_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SdkOption);
       }
-      if (accessPointsCOnfigIpv6_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPointsCOnfigIpv6);
+      if (accessPointsConfigIpv6_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPointsConfigIpv6);
+      }
+      if (accessPointsConfigQUic_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPointsConfigQUic);
+      }
+      if (accessPointsConfigQuicIpv6_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPointsConfigQuicIpv6);
+      }
+      if (CleanAccessPoint != false) {
+        size += 1 + 1;
+      }
+      if (FlowCostSampleRate != 0F) {
+        size += 1 + 4;
+      }
+      if (CommandSampleRate != 0F) {
+        size += 1 + 4;
+      }
+      if (accessPointsConfigWs_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPointsConfigWs);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -887,11 +1079,38 @@ namespace AcFunDanmu {
         }
         SdkOption.MergeFrom(other.SdkOption);
       }
-      if (other.accessPointsCOnfigIpv6_ != null) {
-        if (accessPointsCOnfigIpv6_ == null) {
-          AccessPointsCOnfigIpv6 = new global::AcFunDanmu.AccessPointsConfig();
+      if (other.accessPointsConfigIpv6_ != null) {
+        if (accessPointsConfigIpv6_ == null) {
+          AccessPointsConfigIpv6 = new global::AcFunDanmu.AccessPointsConfig();
         }
-        AccessPointsCOnfigIpv6.MergeFrom(other.AccessPointsCOnfigIpv6);
+        AccessPointsConfigIpv6.MergeFrom(other.AccessPointsConfigIpv6);
+      }
+      if (other.accessPointsConfigQUic_ != null) {
+        if (accessPointsConfigQUic_ == null) {
+          AccessPointsConfigQUic = new global::AcFunDanmu.AccessPointsConfig();
+        }
+        AccessPointsConfigQUic.MergeFrom(other.AccessPointsConfigQUic);
+      }
+      if (other.accessPointsConfigQuicIpv6_ != null) {
+        if (accessPointsConfigQuicIpv6_ == null) {
+          AccessPointsConfigQuicIpv6 = new global::AcFunDanmu.AccessPointsConfig();
+        }
+        AccessPointsConfigQuicIpv6.MergeFrom(other.AccessPointsConfigQuicIpv6);
+      }
+      if (other.CleanAccessPoint != false) {
+        CleanAccessPoint = other.CleanAccessPoint;
+      }
+      if (other.FlowCostSampleRate != 0F) {
+        FlowCostSampleRate = other.FlowCostSampleRate;
+      }
+      if (other.CommandSampleRate != 0F) {
+        CommandSampleRate = other.CommandSampleRate;
+      }
+      if (other.accessPointsConfigWs_ != null) {
+        if (accessPointsConfigWs_ == null) {
+          AccessPointsConfigWs = new global::AcFunDanmu.AccessPointsConfig();
+        }
+        AccessPointsConfigWs.MergeFrom(other.AccessPointsConfigWs);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -930,10 +1149,43 @@ namespace AcFunDanmu {
             break;
           }
           case 42: {
-            if (accessPointsCOnfigIpv6_ == null) {
-              AccessPointsCOnfigIpv6 = new global::AcFunDanmu.AccessPointsConfig();
+            if (accessPointsConfigIpv6_ == null) {
+              AccessPointsConfigIpv6 = new global::AcFunDanmu.AccessPointsConfig();
             }
-            input.ReadMessage(AccessPointsCOnfigIpv6);
+            input.ReadMessage(AccessPointsConfigIpv6);
+            break;
+          }
+          case 50: {
+            if (accessPointsConfigQUic_ == null) {
+              AccessPointsConfigQUic = new global::AcFunDanmu.AccessPointsConfig();
+            }
+            input.ReadMessage(AccessPointsConfigQUic);
+            break;
+          }
+          case 58: {
+            if (accessPointsConfigQuicIpv6_ == null) {
+              AccessPointsConfigQuicIpv6 = new global::AcFunDanmu.AccessPointsConfig();
+            }
+            input.ReadMessage(AccessPointsConfigQuicIpv6);
+            break;
+          }
+          case 64: {
+            CleanAccessPoint = input.ReadBool();
+            break;
+          }
+          case 77: {
+            FlowCostSampleRate = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            CommandSampleRate = input.ReadFloat();
+            break;
+          }
+          case 90: {
+            if (accessPointsConfigWs_ == null) {
+              AccessPointsConfigWs = new global::AcFunDanmu.AccessPointsConfig();
+            }
+            input.ReadMessage(AccessPointsConfigWs);
             break;
           }
         }
@@ -973,10 +1225,43 @@ namespace AcFunDanmu {
             break;
           }
           case 42: {
-            if (accessPointsCOnfigIpv6_ == null) {
-              AccessPointsCOnfigIpv6 = new global::AcFunDanmu.AccessPointsConfig();
+            if (accessPointsConfigIpv6_ == null) {
+              AccessPointsConfigIpv6 = new global::AcFunDanmu.AccessPointsConfig();
             }
-            input.ReadMessage(AccessPointsCOnfigIpv6);
+            input.ReadMessage(AccessPointsConfigIpv6);
+            break;
+          }
+          case 50: {
+            if (accessPointsConfigQUic_ == null) {
+              AccessPointsConfigQUic = new global::AcFunDanmu.AccessPointsConfig();
+            }
+            input.ReadMessage(AccessPointsConfigQUic);
+            break;
+          }
+          case 58: {
+            if (accessPointsConfigQuicIpv6_ == null) {
+              AccessPointsConfigQuicIpv6 = new global::AcFunDanmu.AccessPointsConfig();
+            }
+            input.ReadMessage(AccessPointsConfigQuicIpv6);
+            break;
+          }
+          case 64: {
+            CleanAccessPoint = input.ReadBool();
+            break;
+          }
+          case 77: {
+            FlowCostSampleRate = input.ReadFloat();
+            break;
+          }
+          case 85: {
+            CommandSampleRate = input.ReadFloat();
+            break;
+          }
+          case 90: {
+            if (accessPointsConfigWs_ == null) {
+              AccessPointsConfigWs = new global::AcFunDanmu.AccessPointsConfig();
+            }
+            input.ReadMessage(AccessPointsConfigWs);
             break;
           }
         }

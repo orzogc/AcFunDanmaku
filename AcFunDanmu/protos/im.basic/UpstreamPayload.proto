@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = ".;acproto";
+option go_package = "github.com/orzogc/acfundanmu/acproto";
 
 package AcFunDanmu;
 
@@ -22,4 +22,5 @@ message UpstreamPayload {
     FrontendInfo frontendInfo = 10;
     string kpn = 11;
     bool anonymouseUser = 12;
+    string laneId = 13;
 }

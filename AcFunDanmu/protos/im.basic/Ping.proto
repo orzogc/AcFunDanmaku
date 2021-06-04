@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option go_package = ".;acproto";
+option go_package = "github.com/orzogc/acfundanmu/acproto";
 
 package AcFunDanmu;
 
@@ -19,4 +19,5 @@ message PingResponse {
     fixed32 clientIp = 2;
     fixed32 redirectIp = 3;
     uint32 redirectPort = 4;
+    bytes clientIpV6 = 5;
 }
